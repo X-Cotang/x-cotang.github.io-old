@@ -17,9 +17,10 @@ function d64(){
 	document.getElementById("b64").value=atob(x);
 }
 function xacdinh(){
+	document.getElementById("ngay").innerHTML=Date();
 	var d=new Date();
-    if(d.getDay==0){
-    document.getElementById("cn").className="hii"}	
+    	if(d.getDay==0){
+    	document.getElementById("cn").className="hii"}	
 	else if(d.getDay()==1){document.getElementById('t2').className="hii";}
 	else if(d.getDay()==2){document.getElementById('t3').className="hii";}
 	else if(d.getDay()==3){document.getElementById("t4").className="hii";}
