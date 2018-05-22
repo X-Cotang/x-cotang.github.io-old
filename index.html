@@ -1,18 +1,25 @@
 <html>
 <head>
+
 <title>Xcotang</title>
-<style>
-.hi{
-     text-align: center;                
-     height:75px;                
-     width: 150px;                   
-}
+<style> 
 body{
     background-image:url( "https://images.pexels.com/photos/874619/pexels-photo-874619.jpeg ");	
     background-size:cover;
     background-repeat:no-repeat;			
     background-attachment:fixed;			
     background-position:center;			
+}
+.hi{
+     text-align: center;                
+     height:75px;                
+     width: 150px;                   
+}
+.hii{
+	text-align: center;                
+     height:75px;                
+     width: 150px;
+	 color:red;
 }
 .sidenav {
     height: 100%; /* 100% Full-height */
@@ -140,7 +147,17 @@ a svg{
       background: #555;
     }
   }
-}</style>
+}
+.xacnhan{
+	background-color: #333;
+    border: none;
+    color: white;
+    height: 30px;
+} 
+input.xacnhan:hover{
+	background-color:#878787;
+}
+</style>
 <script type="text/javascript" src="hi.js"></script>
 <iframe src="https://www.nhaccuatui.com/mh/background/U2O3UdKGztFR" allowfullscreen="" width="1" height="1" frameborder="0"></iframe>
 </head>
@@ -150,6 +167,7 @@ a svg{
   <a href="https://www.facebook.com/cb.xct">About</a>
   <a href="#">Features</a>
   <a href="#">Contact Me</a>
+  <a href="#b64">En-Decode</a>
 </div>
  
 <nav class="topnav">
@@ -164,31 +182,30 @@ a svg{
 
 </nav>
  
-<div id="main">
-</div>
+<div id="main"></div>
  <h1 style="text-align: center;height: 10px;;">Thời Khóa Biểu</h1>
     <p style="text-align: center;padding-top: 0px;">(Từ 9-4 đến 22-4)</p>
-<table border="1px" cellpadding="0px" cellspacing="0px" width="50%" align="center">
+<div style="margin-bottom:5%"><table border="1px" cellpadding="0px" cellspacing="0px" width="50%" align="center">
 		<tr class="hi" style=" font-size: 20px;">
-			<th class="hi">
+			<th class="hi" id="t2">
 				Thứ Hai
 			</th>
-			<th class="hi">
+			<th class="hi" id="t3">
 				Thứ Ba
 			</th>
-			<th class="hi">
+			<th class="hi" id="t4">
 				Thứ Tư
 			</th>
-			<th class="hi">
+			<th class="hi" id="t5">
 				Thứ Năm
 			</th>
-			<th class="hi">
+			<th class="hi" id="t6">
 				Thứ Sáu
 			</th>
-			<th class="hi">
+			<th class="hi" id="t7">
 				Thứ Bảy
 			</th>
-			<th class="hi">
+			<th class="hi" id="cn">
 				Chủ Nhật
 			</th>
 		</tr>
@@ -200,6 +217,14 @@ a svg{
 			<td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td>		</tr>  	
 		<tr class="hi">
 			<td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td>		</tr>
- 	</table>
+ 	</table></div>
+	<hr>
+	<div style="margin:5% 0 5%">
+	<fieldset >
+	<legend>Base64 Encode-Decode</legend>
+	<textarea type="text" id="b64" style="width:100%;margin:auto" rows="5"></textarea>
+	<input type="submit" onclick="b64()" value="Encode" class="xacnhan">
+	<input type="submit" onclick="d64()" value="Decode" class="xacnhan">
+	</fieldset></div>
 </body>
 </html>
