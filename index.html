@@ -157,6 +157,21 @@ a svg{
 input.xacnhan:hover{
 	background-color:#878787;
 }
+fieldset {
+	margin: 5% 0;
+}
+.cvnut{
+	width: 10%;
+    margin: 1% auto;
+    background-color: #333;
+    border: none;
+    height: 25px;
+    color: white;
+}
+.cvinp{
+	width:90%;
+}
+input.cvnut:hover{background-color:#878787;}
 </style>
 <script type="text/javascript" src="hi.js"></script>
 <iframe src="https://www.nhaccuatui.com/mh/background/U2O3UdKGztFR" allowfullscreen="" width="1" height="1" frameborder="0"></iframe>
@@ -225,7 +240,15 @@ input.xacnhan:hover{
 	<textarea type="text" id="b64" style="width:100%;margin:auto" rows="5"></textarea>
 	<input type="submit" onclick="b64()" value="Encode" class="xacnhan">
 	<input type="submit" onclick="d64()" value="Decode" class="xacnhan">
-	</fieldset></div>
+	</fieldset>
+	<fieldset>
+	<legend>Converter</legend>
+	<input type="submit" onclick="bina()" value="Binary" class="cvnut"><input type="text" id="bina" class="cvinp"></br>
+	<input type="submit" onclick="octa()" value="Octal" class="cvnut"><input type="text" id="octa" class="cvinp"></br>
+	<input type="submit" onclick="deci()" value="Decimal" class="cvnut"><input type="text" id="deci" class="cvinp"></br>
+	<input type="submit" onclick="hexa()" value="Hex" class="cvnut"><input type="text" id="hexa" class="cvinp"></br>
+	</fieldset>
+	</div>
 	<script>
 	window.onload=xacdinh();
 	</script>
