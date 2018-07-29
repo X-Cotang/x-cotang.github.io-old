@@ -19,7 +19,7 @@ function d64(){
 function xacdinh(){
 	document.getElementById("ngay").innerHTML=Date();
 	var d=new Date();
-    if(d.getDay==0){
+    if(d.getDay()==0){
     document.getElementById("cn").className="hii"}	
 	else if(d.getDay()==1){document.getElementById("t2").className="hii";}
 	else if(d.getDay()==2){document.getElementById("t3").className="hii";}
