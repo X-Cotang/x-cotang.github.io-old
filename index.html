@@ -1,6 +1,9 @@
+<!DOCTYPE html>
+
 <html>
 <head>
-
+<script language="javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+ <meta charset="UTF-8">
 <title>Xcotang</title>
 <style> 
 body{
@@ -169,11 +172,15 @@ fieldset {
     color: white;
 }
 .cvinp{
-	width:90%;
+	width:89%;
 }
+.dangnhap{
+	margin-left: 32px;
+}
+
 input.cvnut:hover{background-color:#878787;}
 </style>
-<script type="text/javascript" src="hi.js"></script>
+<script type="text/javascript" src="./hi.js"></script>
 
 <iframe src="https://www.nhaccuatui.com/mh/background/U2O3UdKGztFR" allowfullscreen="" width="1" height="1" frameborder="0"></iframe>
 </head>
@@ -184,7 +191,17 @@ input.cvnut:hover{background-color:#878787;}
   <a href="#" onclick="closeNav()">Features</a>
   <a href="#" onclick="closeNav()">Contact Me</a>
   <a href="#b64" onclick="closeNav()">En-Decode</a>
-</div>
+
+   <fieldset id="fieldset">
+  <p class="dangnhap" style="color:white">Tài Khoản</p>
+  <input class="dangnhap" type="text" name="taikhoanDn" >
+   <p class="dangnhap" style="color:white">Mật Khẩu</p>
+  <input class="dangnhap" type="password" name="passDn" >
+  <input align="center" type="submit" value="Đăng Nhập" class="xacnhan" style="margin-left:32px">
+	<!--<input align="center" type="submit" value="Đăng Ký" class="xacnhan" style="margin-left:1px">-->
+	<a href="#" style="font-size:15px" onclick="dkdn(0)" id="dangky">Đăng ký !</a>
+	</fieldset>
+  </div>
 <script id="cid0020000188162950482" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 241px;height: 300px;">{"handle":"cancavutru","arch":"js","styles":{"a":"606060","b":64,"c":"FFFFFF","d":"FFFFFF","f":64,"i":64,"k":"606060","l":"606060","m":"606060","n":"FFFFFF","o":64,"p":"10","q":"606060","r":64,"pos":"br","cv":1,"cvfntsz":"12px","cvbg":"606060","cvbga":64,"cvw":241,"cvh":41,"ticker":1,"fwtickm":1}}</script>
 <nav class="topnav">
   <a href="#" onclick="openNav()">
