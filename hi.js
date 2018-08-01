@@ -62,3 +62,10 @@ function deci(){
 	x=document.getElementById("deci").value;
 	conV(x,10);
 }
+function dkdn(x){
+	if(x==0){
+	$("#fieldset").html('<p class="dangnhap" style="color:white">Họ Tên</p><input class="dangnhap" type="text" name="ten" required ><p class="dangnhap" style="color:white">Tài Khoản</p><input class="dangnhap" type="text" name="taikhoanDk" ><p class="dangnhap" style="color:white">Mật Khẩu</p><input class="dangnhap" type="password" name="passDk" required ><p class="dangnhap" style="color:white">Nhập Lại Mật Khẩu</p><input class="dangnhap" type="password" name="repassDk" required><p class="dangnhap" style="color:white">Email</p><input type="email" name="email" class="dangnhap" required><input align="center" type="submit" value="Đăng Ký" class="xacnhan" style="margin-left:32px"><a style="font-size:15px" href="#" onclick="dkdn(1)">Đăng Nhập !</a>');
+	}else if(x==1){
+		$("#fieldset").html('<p class="dangnhap" style="color:white">Tài Khoản</p><input class="dangnhap" type="text" name="taikhoanDn" ><p class="dangnhap" style="color:white">Mật Khẩu</p><input class="dangnhap" type="password" name="passDn" ><input align="center" type="submit" value="Đăng Nhập" class="xacnhan" style="margin-left:32px"><a href="#" style="font-size:15px" onclick="dkdn(0)" id="dangky">Đăng ký !</a>');
+	}
+}
