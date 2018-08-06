@@ -63,9 +63,54 @@ function deci(){
 	conV(x,10);
 }
 function dkdn(x){
+	
 	if(x==0){
-	$("#fieldset").html('<p class="dangnhap" style="color:white">Họ Tên</p><input class="dangnhap" type="text" name="ten" required ><p class="dangnhap" style="color:white">Tài Khoản</p><input class="dangnhap" type="text" name="taikhoanDk" ><p class="dangnhap" style="color:white">Mật Khẩu</p><input class="dangnhap" type="password" name="passDk" required ><p class="dangnhap" style="color:white">Nhập Lại Mật Khẩu</p><input class="dangnhap" type="password" name="repassDk" required><p class="dangnhap" style="color:white">Email</p><input type="email" name="email" class="dangnhap" required><input align="center" type="submit" value="Đăng Ký" class="xacnhan" style="margin-left:32px"><a style="font-size:15px" href="#" onclick="dkdn(1)">Đăng Nhập !</a>');
+	$("#fieldset").html('<p class="dangnhap" style="color:white">Họ Tên</p><input class="dangnhap" type="text" id="ten"  required ><p class="dangnhap" style="color:white">Tài Khoản</p><input class="dangnhap" type="text" id="taiKhoanDk" ><p class="dangnhap" style="color:white">Mật Khẩu</p><input class="dangnhap" type="password" id="passDk" required ><p class="dangnhap" style="color:white">Nhập Lại Mật Khẩu</p><input class="dangnhap" type="password" id="repassDk" required><p class="dangnhap" style="color:white">Email</p><input type="email" id="email" class="dangnhap" required><input align="center" type="submit" value="Đăng Ký" class="xacnhan" style="margin-left:32px" onclick="dk()"><a style="font-size:15px" href="#" onclick="dkdn(1)">Đăng Nhập !</a>');
 	}else if(x==1){
-		$("#fieldset").html('<p class="dangnhap" style="color:white">Tài Khoản</p><input class="dangnhap" type="text" name="taikhoanDn" ><p class="dangnhap" style="color:white">Mật Khẩu</p><input class="dangnhap" type="password" name="passDn" ><input align="center" type="submit" value="Đăng Nhập" class="xacnhan" style="margin-left:32px"><a href="#" style="font-size:15px" onclick="dkdn(0)" id="dangky">Đăng ký !</a>');
+		$("#fieldset").html('<form action="../test/dndk/dangnhap.php" method="POST"><p class="dangnhap" style="color:white">Tài Khoản</p><input class="dangnhap" type="text" name="taiKhoanDn" ><p class="dangnhap" style="color:white">Mật Khẩu</p><input class="dangnhap" type="password" name="passDn" ><input name="sub2" align="center" type="submit" value="Đăng Nhập" class="xacnhan" style="margin-left:32px"></form><a href="#" style="font-size:15px" onclick="dkdn(0)" id="dangky">Đăng ký !</a>');
 	}
 }
+function dk(){
+	//var data=new FormData($('#'))
+	$('#taiKhoanDk').css( "border", "1px solid white" );
+	$('#passDk').css( "border", "1px solid white" );
+	$('#repassDk').css( "border", "1px solid white" );
+	$('#ten').css( "border", "1px solid white" );
+	$('#email').css( "border", "1px solid white" );
+	$.ajax({
+                    url : "../test/dangky.php",
+                    type : "post",
+                    dataType:"json",
+                    data : {
+                        sub1:"Đăng ký",
+						taiKhoanDk:$('#taiKhoanDk').val(),
+						passDk:$('#passDk').val(),
+						repassDk:$('#repassDk').val(),
+						ten:$('#ten').val(),
+						email:$('#email').val(),
+                    },
+                    success : function (result){
+                        //$('#result').html(result);
+					  // var t="";
+					   //t+="'"+result+"'";
+						//var obj=JSON.parse(t);
+						//$('#result').html(t);
+						//if(obj.tk=='1'){$('#result').html("chưa nhập tên tài khoản");}
+                    //$.each(result,function(key,item){
+						//;
+					//});
+					if(result.success=='1'){
+					$("#fieldset").html('<p style="padding-left:32px;color:white;">Đăng ký thành công!!^-^</p><a style="font-size:15px" href="#" onclick="dkdn(1)">Đăng Nhập !</a>')	;
+					
+	
+					}else{
+					if(result.tk=='1'){$('#taiKhoanDk').css( "border", "1px solid red" );}
+					if(result.mk=='1'){$('#passDk').css( "border", "1px solid red" );$('#repassDk').css( "border", "1px solid red" );}
+					if(result.ten=='1'){$('#ten').css( "border", "1px solid red" );}
+					if(result.email=='1'){$('#email').css( "border", "1px solid red" );}
+					}
+					
+					}
+               
+            });}
+			
