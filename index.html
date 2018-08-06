@@ -196,13 +196,16 @@ input.cvnut:hover{background-color:#878787;}
   <a href="#b64" onclick="closeNav()">En-Decode</a>
 
    <fieldset id="fieldset">
+   <form action="../test/dndk/dangnhap.php" method="POST" >
   <p class="dangnhap" style="color:white">Tài Khoản</p>
-  <input class="dangnhap" type="text" name="taikhoanDn" >
+  <input class="dangnhap" type="text" name="taiKhoanDn" >
    <p class="dangnhap" style="color:white">Mật Khẩu</p>
   <input class="dangnhap" type="password" name="passDn" >
-  <input align="center" type="submit" value="Đăng Nhập" class="xacnhan" style="margin-left:32px">
+  <input align="center" type="submit" value="Đăng Nhập" class="xacnhan" name="sub2" style="margin-left:32px">
 	<!--<input align="center" type="submit" value="Đăng Ký" class="xacnhan" style="margin-left:1px">-->
+	</form>
 	<a href="#" style="font-size:15px" onclick="dkdn(0)" id="dangky">Đăng ký !</a>
+	
 	</fieldset>
   </div>
 <script id="cid0020000188162950482" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 241px;height: 300px;">{"handle":"cancavutru","arch":"js","styles":{"a":"606060","b":64,"c":"FFFFFF","d":"FFFFFF","f":64,"i":64,"k":"606060","l":"606060","m":"606060","n":"FFFFFF","o":64,"p":"10","q":"606060","r":64,"pos":"br","cv":1,"cvfntsz":"12px","cvbg":"606060","cvbga":64,"cvw":241,"cvh":41,"ticker":1,"fwtickm":1}}</script>
@@ -219,6 +222,7 @@ input.cvnut:hover{background-color:#878787;}
 </nav>
  
 <div id="main"></div>
+<div id="result"></div>
  <h1 style="text-align: center;height: 10px;;">Thời Khóa Biểu</h1>
     <p style="text-align: center;padding-top: 0px;" id="ngay"></p>
 <div style="margin-bottom:5%"><table border="1px" cellpadding="0px" cellspacing="0px" width="50%" align="center">
@@ -246,11 +250,13 @@ input.cvnut:hover{background-color:#878787;}
 			</th>
 		</tr>
 		<tr class="hi">
-			<td><strong>Toán A2</br>203-TA2</strong></td><td><b>Toán A2</br>304-TA2</b></td><td>Nghỉ</td><td><b>Đường Lối</br>304-TA2</b></td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td>		</tr>
+			<td>Nghỉ</td><td><b>Thể chất </br>Sân</b></td><td><b>Tư tưởng</br>304-TA2</b></td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td>		</tr>
 		<tr class="hi">
-			<td><strong>Kỹ Năng</br>204-TA2</strong></td><td>Nghỉ</td><td><strong>Đường Lối</br>304-TA2</strong></td><td><strong>Lập Trình</br>203-TA4</strong></td><td><b>Đường Lối</br>304-TA2</b></td><td>Nghỉ</td><td>Nghỉ</td>		</tr>  	
+			<td><strong>Vật lý</br>103-TA1</strong></td><td>Nghỉ</td><td><b>Vật lý</br>103-TA1</b></td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td>		</tr>  	
 		<tr class="hi">
-			<td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td>		</tr>  	
+			<td><b>Toán XS</br>103-TA1</b></td><td>Nghỉ</td><td><b>Toán XS</br>103-TA1</b></td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td>	</tr>  	
+		<tr class="hi">
+			<td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td>		</tr>
 		<tr class="hi">
 			<td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td><td>Nghỉ</td>		</tr>
  	</table></div>
@@ -270,6 +276,7 @@ input.cvnut:hover{background-color:#878787;}
 	<input type="submit" onclick="hexa()" value="Hex" class="cvnut"><input type="text" id="hexa" class="cvinp"></br>
 	</fieldset>
 	</div>
+	
 	<script>
 	window.onload=xacdinh();
 	</script>
