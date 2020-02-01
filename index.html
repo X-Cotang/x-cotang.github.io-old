@@ -265,10 +265,14 @@ input.cvnut:hover{background-color:#878787;}
 	<hr>
 	<div style="margin:5% 0 5%">
 	<fieldset >
-	<legend>Base64 Encode-Decode</legend>
+	<legend>Encode-Decode</legend>
 	<textarea type="text" id="b64" style="width:100%;margin:auto" rows="5"></textarea>
-	<input type="submit" onclick="b64()" value="Encode" class="xacnhan">
-	<input type="submit" onclick="d64()" value="Decode" class="xacnhan">
+	<input type="submit" onclick="b64()" value="Base64 Encode" class="xacnhan">
+  <input type="submit" onclick="d64()" value="Base64 Decode" class="xacnhan">
+  <input type="submit" onclick="urlencode(0)" value="URL Encode" class="xacnhan">
+  <input type="submit" onclick="urldecode(0)" value="URL Decode" class="xacnhan">
+  <input type="submit" onclick="urlencode(1)" value="URL Encode Component" class="xacnhan">
+  <input type="submit" onclick="urldecode(1)" value="URL Decode Component" class="xacnhan">
 	</fieldset>
 	<fieldset>
 	<legend>Converter</legend>

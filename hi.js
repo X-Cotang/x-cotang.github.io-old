@@ -16,6 +16,22 @@ function d64(){
 	var x=document.getElementById("b64").value;
 	document.getElementById("b64").value=atob(x);
 }
+function urlencode(b){
+	var x=document.getElementById("b64").value;
+	if(b==0){
+		document.getElementById("b64").value=encodeURI(x);
+	}else{
+		document.getElementById("b64").value=encodeURIComponent(x);
+	}
+}
+function urldecode(b){
+	var x=document.getElementById("b64").value;
+	if(b==0){
+		document.getElementById("b64").value=decodeURI(x);
+	}else{
+		document.getElementById("b64").value=decodeURIComponent(x);
+	}
+}
 function xacdinh(){
 	document.getElementById("ngay").innerHTML=Date();
 	var d=new Date();
