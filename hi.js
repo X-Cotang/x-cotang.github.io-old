@@ -8,13 +8,16 @@ function closeNav() {
     document.getElementById("sideNavigation").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
 }
+
 function b64(){
 	var x=document.getElementById("b64").value;
 	document.getElementById("b64").value=btoa(x);
+	getLength()
 }
 function d64(){
 	var x=document.getElementById("b64").value;
 	document.getElementById("b64").value=atob(x);
+	getLength()
 }
 function urlencode(b){
 	var x=document.getElementById("b64").value;
@@ -23,6 +26,7 @@ function urlencode(b){
 	}else{
 		document.getElementById("b64").value=encodeURIComponent(x);
 	}
+	getLength()
 }
 function urldecode(b){
 	var x=document.getElementById("b64").value;
@@ -31,6 +35,25 @@ function urldecode(b){
 	}else{
 		document.getElementById("b64").value=decodeURIComponent(x);
 	}
+	getLength()
+}
+function upperAndLower(b){
+	var x=document.getElementById("b64").value;
+	if(b==0){
+		document.getElementById("b64").value=x.toLocaleUpperCase();
+	}else{
+		document.getElementById("b64").value=x.toLocaleLowerCase();
+	}
+	getLength()
+}
+function reverseString() {
+	var x=document.getElementById("b64").value;
+    document.getElementById("b64").value=x.split("").reverse().join("");
+}
+
+function getLength(){
+	var x=document.getElementById("b64").value;
+	document.getElementById("id_length").value=x.length;
 }
 function xacdinh(){
 	document.getElementById("ngay").innerHTML=Date();

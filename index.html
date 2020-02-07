@@ -193,9 +193,9 @@ input.cvnut:hover{background-color:#878787;}
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="https://www.facebook.com/cb.xct" onclick="closeNav()">About</a>
   <a href="#" onclick="closeNav()">Features</a>
-  <a href="#" onclick="closeNav()">Contact Me</a>
+  <a href="#CV_WRAPPER" onclick="closeNav()">confession</a>
   <a href="#b64" onclick="closeNav()">En-Decode</a>
-  <a href="#" onclick="closeNav();alert('Coming soon')">Tool Tín Chỉ</a>
+  <a href="https://d4rk-l0tu5.000webhostapp.com/" onclick="closeNav()">Tool Tín Chỉ</a>
 
    <fieldset id="fieldset">
    <form action="../test/dndk/dangnhap.php" method="POST" >
@@ -264,15 +264,19 @@ input.cvnut:hover{background-color:#878787;}
  	</table></div>
 	<hr>
 	<div style="margin:5% 0 5%">
-	<fieldset >
-	<legend>Encode-Decode</legend>
-	<textarea type="text" id="b64" style="width:100%;margin:auto" rows="5"></textarea>
+	<fieldset style="text-align: center;" >
+  <legend>Encode-Decode</legend>
+  <input type="text" id="id_length" style="text-align: center;" disabled></br>
+  <textarea type="text" id="b64" style="width:100%;margin:auto" rows="5" onkeyup="getLength()"></textarea>
 	<input type="submit" onclick="b64()" value="Base64 Encode" class="xacnhan">
-  <input type="submit" onclick="d64()" value="Base64 Decode" class="xacnhan">
+  <input type="submit" onclick="d64()" value="Base64 Decode" class="xacnhan"></br>
   <input type="submit" onclick="urlencode(0)" value="URL Encode" class="xacnhan">
   <input type="submit" onclick="urldecode(0)" value="URL Decode" class="xacnhan">
   <input type="submit" onclick="urlencode(1)" value="URL Encode Component" class="xacnhan">
-  <input type="submit" onclick="urldecode(1)" value="URL Decode Component" class="xacnhan">
+  <input type="submit" onclick="urldecode(1)" value="URL Decode Component" class="xacnhan"></br>
+  <input type="submit" onclick="upperAndLower(0)" value="Upper case" class="xacnhan">
+  <input type="submit" onclick="upperAndLower(1)" value="Lower case" class="xacnhan"></br>
+  <input type="submit" onclick="reverseString()" value="Reverse String" class="xacnhan">
 	</fieldset>
 	<fieldset>
 	<legend>Converter</legend>
