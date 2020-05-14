@@ -109,6 +109,17 @@ function dkdn(x){
 		$("#fieldset").html('<form action="../test/dndk/dangnhap.php" method="POST"><p class="dangnhap" style="color:white">Tài Khoản</p><input class="dangnhap" type="text" name="taiKhoanDn" ><p class="dangnhap" style="color:white">Mật Khẩu</p><input class="dangnhap" type="password" name="passDn" ><input name="sub2" align="center" type="submit" value="Đăng Nhập" class="xacnhan" style="margin-left:32px"></form><a href="#" style="font-size:15px" onclick="dkdn(0)" id="dangky">Đăng ký !</a>');
 	}
 }
+
+function toHex(s) {
+    // String to hex
+    var s = unescape(encodeURIComponent(s))
+    var h = ''
+    for (var i = 0; i < s.length; i++) {
+        h += s.charCodeAt(i).toString(16)
+    }
+    return h
+}
+
 function dk(){
 	//var data=new FormData($('#'))
 	$('#taiKhoanDk').css( "border", "1px solid white" );
